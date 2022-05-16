@@ -16277,7 +16277,7 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[106]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[120]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">MP_A</span> <span class="o">=</span> <span class="mi">0</span>
@@ -16291,7 +16291,7 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
     <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
     
 <span class="n">total_accuracy</span> <span class="o">=</span> <span class="n">accuracy</span><span class="o">/</span><span class="n">count</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The guard data&#39;s accuracy was </span><span class="si">{</span><span class="n">total_accuracy</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The guard regression&#39;s accuracy was </span><span class="si">{</span><span class="n">total_accuracy</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16311,7 +16311,7 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The guard data&#39;s accuracy was 0.835
+<pre>The guard regression&#39;s accuracy was 0.835
 </pre>
 </div>
 </div>
@@ -16930,7 +16930,7 @@ Similar to the residuals from the guard regression, players with over 40 minutes
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>That was less accurate than usual. This is likely because Gobert doesn't take too many shots, so he doesn't score many points, and so this harms him with respect to the regression model. Let's try a below-average player like Dragan Bender.</p>
+<p>That was less accurate than usual. This is likely because Gobert doesn't take too many shots, so he doesn't score many points, and so this harms him with respect to the regression model. Let's try a below-average player like Marvin Williams.</p>
 
 </div>
 </div>
@@ -17060,7 +17060,7 @@ Similar to the residuals from the guard regression, players with over 40 minutes
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[107]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[119]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">MP_A</span> <span class="o">=</span> <span class="mi">0</span>
@@ -17075,7 +17075,7 @@ Similar to the residuals from the guard regression, players with over 40 minutes
     <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
     
 <span class="n">total_accuracy</span> <span class="o">=</span> <span class="n">accuracy</span><span class="o">/</span><span class="n">count</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The guard data&#39;s accuracy was </span><span class="si">{</span><span class="n">total_accuracy</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The SF/PF/C regression&#39;s accuracy was </span><span class="si">{</span><span class="n">total_accuracy</span><span class="si">:</span><span class="s2">.4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -17095,7 +17095,7 @@ Similar to the residuals from the guard regression, players with over 40 minutes
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The guard data&#39;s accuracy was 0.9875
+<pre>The SF/PF/C regression&#39;s accuracy was 0.9875
 </pre>
 </div>
 </div>
