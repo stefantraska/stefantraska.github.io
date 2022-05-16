@@ -14281,7 +14281,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[122]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14293,8 +14293,6 @@ a.anchor-link {
 
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
 </pre></div>
 
@@ -14374,10 +14372,11 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[129]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">G</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This data is conducted on </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="si">}</span><span class="s2"> NBA players during the 19-20 season.&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -14410,7 +14409,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[130]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14429,7 +14428,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[130]:</div>
 
 
 
@@ -14452,6 +14451,7 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>index</th>
       <th>Player</th>
       <th>Pos</th>
       <th>Age</th>
@@ -14461,7 +14461,6 @@ a.anchor-link {
       <th>MP</th>
       <th>FG</th>
       <th>FGA</th>
-      <th>FG%</th>
       <th>...</th>
       <th>FT%</th>
       <th>ORB</th>
@@ -14478,6 +14477,7 @@ a.anchor-link {
   <tbody>
     <tr>
       <th>0</th>
+      <td>0</td>
       <td>Steven Adams</td>
       <td>C</td>
       <td>26</td>
@@ -14487,7 +14487,6 @@ a.anchor-link {
       <td>26.70</td>
       <td>4.50</td>
       <td>7.60</td>
-      <td>0.59</td>
       <td>...</td>
       <td>0.58</td>
       <td>3.30</td>
@@ -14502,6 +14501,7 @@ a.anchor-link {
     </tr>
     <tr>
       <th>1</th>
+      <td>1</td>
       <td>Bam Adebayo</td>
       <td>PF</td>
       <td>22</td>
@@ -14511,7 +14511,6 @@ a.anchor-link {
       <td>33.60</td>
       <td>6.10</td>
       <td>11.00</td>
-      <td>0.56</td>
       <td>...</td>
       <td>0.69</td>
       <td>2.40</td>
@@ -14526,6 +14525,7 @@ a.anchor-link {
     </tr>
     <tr>
       <th>2</th>
+      <td>2</td>
       <td>LaMarcus Aldridge</td>
       <td>C</td>
       <td>34</td>
@@ -14535,7 +14535,6 @@ a.anchor-link {
       <td>33.10</td>
       <td>7.40</td>
       <td>15.00</td>
-      <td>0.49</td>
       <td>...</td>
       <td>0.83</td>
       <td>1.90</td>
@@ -14549,7 +14548,8 @@ a.anchor-link {
       <td>18.90</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>3</th>
+      <td>4</td>
       <td>Nickeil Alexander-Walker</td>
       <td>SG</td>
       <td>21</td>
@@ -14559,7 +14559,6 @@ a.anchor-link {
       <td>12.60</td>
       <td>2.10</td>
       <td>5.70</td>
-      <td>0.37</td>
       <td>...</td>
       <td>0.68</td>
       <td>0.20</td>
@@ -14573,7 +14572,8 @@ a.anchor-link {
       <td>5.70</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>4</th>
+      <td>5</td>
       <td>Grayson Allen</td>
       <td>SG</td>
       <td>24</td>
@@ -14583,7 +14583,6 @@ a.anchor-link {
       <td>18.90</td>
       <td>3.10</td>
       <td>6.60</td>
-      <td>0.47</td>
       <td>...</td>
       <td>0.87</td>
       <td>0.20</td>
@@ -14598,7 +14597,7 @@ a.anchor-link {
     </tr>
   </tbody>
 </table>
-<p>5 rows × 29 columns</p>
+<p>5 rows × 30 columns</p>
 </div>
 </div>
 
@@ -14616,7 +14615,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[131]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14635,7 +14634,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[131]:</div>
 
 
 
@@ -14658,6 +14657,7 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>index</th>
       <th>Age</th>
       <th>G</th>
       <th>GS</th>
@@ -14667,7 +14667,6 @@ a.anchor-link {
       <th>FG%</th>
       <th>3P</th>
       <th>3PA</th>
-      <th>3P%</th>
       <th>...</th>
       <th>FT%</th>
       <th>ORB</th>
@@ -14708,6 +14707,7 @@ a.anchor-link {
     </tr>
     <tr>
       <th>mean</th>
+      <td>318.95</td>
       <td>26.05</td>
       <td>52.97</td>
       <td>26.10</td>
@@ -14717,7 +14717,6 @@ a.anchor-link {
       <td>0.46</td>
       <td>1.14</td>
       <td>3.20</td>
-      <td>0.32</td>
       <td>...</td>
       <td>0.75</td>
       <td>0.96</td>
@@ -14732,6 +14731,7 @@ a.anchor-link {
     </tr>
     <tr>
       <th>std</th>
+      <td>185.26</td>
       <td>4.05</td>
       <td>13.26</td>
       <td>24.58</td>
@@ -14741,7 +14741,6 @@ a.anchor-link {
       <td>0.07</td>
       <td>0.87</td>
       <td>2.22</td>
-      <td>0.10</td>
       <td>...</td>
       <td>0.11</td>
       <td>0.77</td>
@@ -14756,6 +14755,7 @@ a.anchor-link {
     </tr>
     <tr>
       <th>min</th>
+      <td>0.00</td>
       <td>19.00</td>
       <td>26.00</td>
       <td>0.00</td>
@@ -14763,7 +14763,6 @@ a.anchor-link {
       <td>0.40</td>
       <td>0.70</td>
       <td>0.29</td>
-      <td>0.00</td>
       <td>0.00</td>
       <td>0.00</td>
       <td>...</td>
@@ -14780,6 +14779,7 @@ a.anchor-link {
     </tr>
     <tr>
       <th>25%</th>
+      <td>165.75</td>
       <td>23.00</td>
       <td>42.75</td>
       <td>3.00</td>
@@ -14789,7 +14789,6 @@ a.anchor-link {
       <td>0.41</td>
       <td>0.50</td>
       <td>1.60</td>
-      <td>0.29</td>
       <td>...</td>
       <td>0.69</td>
       <td>0.40</td>
@@ -14804,6 +14803,7 @@ a.anchor-link {
     </tr>
     <tr>
       <th>50%</th>
+      <td>311.50</td>
       <td>26.00</td>
       <td>56.00</td>
       <td>17.00</td>
@@ -14813,7 +14813,6 @@ a.anchor-link {
       <td>0.44</td>
       <td>1.00</td>
       <td>2.90</td>
-      <td>0.35</td>
       <td>...</td>
       <td>0.78</td>
       <td>0.70</td>
@@ -14828,6 +14827,7 @@ a.anchor-link {
     </tr>
     <tr>
       <th>75%</th>
+      <td>480.25</td>
       <td>29.00</td>
       <td>64.00</td>
       <td>51.00</td>
@@ -14837,7 +14837,6 @@ a.anchor-link {
       <td>0.48</td>
       <td>1.60</td>
       <td>4.40</td>
-      <td>0.38</td>
       <td>...</td>
       <td>0.83</td>
       <td>1.20</td>
@@ -14852,6 +14851,7 @@ a.anchor-link {
     </tr>
     <tr>
       <th>max</th>
+      <td>650.00</td>
       <td>43.00</td>
       <td>74.00</td>
       <td>73.00</td>
@@ -14861,7 +14861,6 @@ a.anchor-link {
       <td>0.78</td>
       <td>4.40</td>
       <td>12.40</td>
-      <td>1.00</td>
       <td>...</td>
       <td>1.00</td>
       <td>4.60</td>
@@ -14876,7 +14875,7 @@ a.anchor-link {
     </tr>
   </tbody>
 </table>
-<p>8 rows × 26 columns</p>
+<p>8 rows × 27 columns</p>
 </div>
 </div>
 
@@ -14889,7 +14888,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>As we can see, the typical player plays 22 minutes per game, makes 46% of their field goals, and scores 10 points per game. There is a high standard deviation for points per game, as som eof the best players average 30 points per game, while others average 0.</p>
+<p>As we can see, the typical player plays 22 minutes per game, makes 46% of their field goals, and scores 10 points per game. There is a high standard deviation for points per game, because some of the best players average 30 points per game, while others average 0.</p>
 
 </div>
 </div>
@@ -14900,7 +14899,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[132]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;MP&quot;</span><span class="p">],</span> 
@@ -14948,13 +14947,13 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>A player plays a certain amount of minutes per game depending on how valuable they are to the team, as we can see, some play few minutes, while others play around 75% of the game. The distribution for minutes played is somewhat similar to a bell curve.</p>
+<p>A player plays a certain amount of minutes per game depending on how valuable they are to the team, as we can see, some play few minutes, while others play around 75% of the game. The distribution for minutes played is somewhat similar to a bimodal distribution, showing that one curve relates to bench players, while the other is related to players who start.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[133]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;PTS&quot;</span><span class="p">],</span> 
@@ -15002,7 +15001,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[134]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;AST&quot;</span><span class="p">],</span> 
@@ -15050,7 +15049,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[135]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;TRB&quot;</span><span class="p">],</span> 
@@ -15132,7 +15131,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[136]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;FG%&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;3P%&quot;</span><span class="p">)</span>
@@ -15151,13 +15150,13 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[136]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;seaborn.axisgrid.JointGrid at 0x7fed31437b80&gt;</pre>
+<pre>&lt;seaborn.axisgrid.JointGrid at 0x7f8c6d923580&gt;</pre>
 </div>
 
 </div>
@@ -15191,7 +15190,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[137]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">statistics</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PTS&quot;</span><span class="p">,</span> <span class="s2">&quot;AST&quot;</span><span class="p">,</span> <span class="s2">&quot;TRB&quot;</span><span class="p">,</span> <span class="s2">&quot;FG%&quot;</span><span class="p">,</span> <span class="s2">&quot;3P%&quot;</span><span class="p">,</span> <span class="s2">&quot;BLK&quot;</span><span class="p">,</span> <span class="s2">&quot;STL&quot;</span><span class="p">,</span> <span class="s2">&quot;TOV&quot;</span><span class="p">]</span>
@@ -15365,7 +15364,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[138]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">center_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">Pos</span> <span class="o">==</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
@@ -15418,7 +15417,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[113]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[139]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pg_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">Pos</span> <span class="o">==</span> <span class="s2">&quot;PG&quot;</span> <span class="p">]</span>
@@ -15471,7 +15470,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[115]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[140]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pf_center_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="o">.</span><span class="n">Pos</span> <span class="o">==</span> <span class="s2">&quot;PF&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Pos</span> <span class="o">==</span> <span class="s2">&quot;C&quot;</span><span class="p">)]</span>
@@ -15556,7 +15555,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[141]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">guard_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="o">.</span><span class="n">Pos</span> <span class="o">==</span> <span class="s2">&quot;PG&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Pos</span> <span class="o">==</span> <span class="s2">&quot;SG&quot;</span><span class="p">)]</span>
@@ -15609,7 +15608,7 @@ Test data makes up the remaining 20.1%.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[142]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">guard_data_reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
@@ -15647,7 +15646,7 @@ Test data makes up the remaining 20.1%.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[143]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the residuals of the regression model</span>
@@ -15709,7 +15708,7 @@ Test data makes up the remaining 20.1%.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[144]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">reg_coef</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">guard_data_reg</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">x_train</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Coefficient&#39;</span><span class="p">])</span>
@@ -15729,7 +15728,7 @@ Test data makes up the remaining 20.1%.
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[144]:</div>
 
 
 
@@ -15802,7 +15801,7 @@ Test data makes up the remaining 20.1%.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[145]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted_vals</span> <span class="o">=</span> <span class="n">guard_data_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
@@ -15817,7 +15816,7 @@ Test data makes up the remaining 20.1%.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[146]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Regression of Actual vs. Predicted Minutes</span>
@@ -15898,24 +15897,454 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Using-the-Model-to-Make-a-Prediction">Using the Model to Make a Prediction<a class="anchor-link" href="#Using-the-Model-to-Make-a-Prediction">&#182;</a></h2><p>Entering players' stats, we will be able to see how accurate the model is at predicting minutes played per game. I got the data from the dataframe, but if you want to try out players' statlines from other seasons, check out <a href="https://www.basketball-reference.com">Basketball Reference</a>, which has every statistic of every NBA player. Another good resource is <a href="https://www.espn.com/nba/stats">ESPN</a>, which is easy to use and also easy to parse.</p>
-<p>Let's start out with an average guard, such as Grayson Allen.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Grayson Allen: 8.7 PTS, 1.4 AST, 46.6% FG%, .404 3P%, 0.3 STL</p>
+<h2 id="Using-the-Model-to-Make-a-Prediction">Using the Model to Make a Prediction<a class="anchor-link" href="#Using-the-Model-to-Make-a-Prediction">&#182;</a></h2><p>Entering players' stats, we will be able to see how accurate the model is at predicting minutes played per game. I got the data from the dataframe, but if you want to try out players' statlines from other seasons, check out <a href="https://www.basketball-reference.com">Basketball Reference</a>, which has every statistic of every NBA player. Another good resource is <a href="https://www.espn.com/nba/stats">ESPN</a>, which is easy to use and also easy to parse. Obviously, we should choose players from the test dataset, because choosing a player from the training dataset may be biased.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[159]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_train</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">x_train</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[159]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>PTS</th>
+      <th>AST</th>
+      <th>FG%</th>
+      <th>3P%</th>
+      <th>STL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>62</td>
+      <td>15.00</td>
+      <td>2.90</td>
+      <td>0.42</td>
+      <td>0.39</td>
+      <td>0.90</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>88</td>
+      <td>5.40</td>
+      <td>1.60</td>
+      <td>0.46</td>
+      <td>0.33</td>
+      <td>0.40</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>417</td>
+      <td>29.60</td>
+      <td>9.30</td>
+      <td>0.44</td>
+      <td>0.36</td>
+      <td>1.10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100</td>
+      <td>4.20</td>
+      <td>0.30</td>
+      <td>0.39</td>
+      <td>0.36</td>
+      <td>0.20</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>131</td>
+      <td>4.50</td>
+      <td>1.10</td>
+      <td>0.47</td>
+      <td>0.35</td>
+      <td>0.40</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>60</td>
+      <td>8.10</td>
+      <td>1.40</td>
+      <td>0.40</td>
+      <td>0.33</td>
+      <td>0.90</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>125</td>
+      <td>5.10</td>
+      <td>1.20</td>
+      <td>0.35</td>
+      <td>0.35</td>
+      <td>0.40</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>299</td>
+      <td>9.60</td>
+      <td>5.20</td>
+      <td>0.40</td>
+      <td>0.30</td>
+      <td>1.10</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>54</td>
+      <td>8.90</td>
+      <td>4.00</td>
+      <td>0.44</td>
+      <td>0.34</td>
+      <td>1.10</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>188</td>
+      <td>19.20</td>
+      <td>3.00</td>
+      <td>0.43</td>
+      <td>0.39</td>
+      <td>0.90</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>214</td>
+      <td>25.30</td>
+      <td>10.20</td>
+      <td>0.49</td>
+      <td>0.35</td>
+      <td>1.20</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>137</td>
+      <td>11.20</td>
+      <td>1.70</td>
+      <td>0.42</td>
+      <td>0.39</td>
+      <td>0.50</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>271</td>
+      <td>10.10</td>
+      <td>0.80</td>
+      <td>0.44</td>
+      <td>0.40</td>
+      <td>0.60</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>321</td>
+      <td>3.90</td>
+      <td>1.70</td>
+      <td>0.41</td>
+      <td>0.28</td>
+      <td>1.10</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>257</td>
+      <td>2.40</td>
+      <td>1.30</td>
+      <td>0.47</td>
+      <td>0.35</td>
+      <td>0.30</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>161</td>
+      <td>8.00</td>
+      <td>1.30</td>
+      <td>0.42</td>
+      <td>0.37</td>
+      <td>1.30</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>97</td>
+      <td>9.20</td>
+      <td>1.70</td>
+      <td>0.40</td>
+      <td>0.30</td>
+      <td>0.90</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>354</td>
+      <td>9.90</td>
+      <td>5.40</td>
+      <td>0.43</td>
+      <td>0.32</td>
+      <td>1.20</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>273</td>
+      <td>12.80</td>
+      <td>2.80</td>
+      <td>0.42</td>
+      <td>0.38</td>
+      <td>0.70</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>265</td>
+      <td>6.50</td>
+      <td>5.00</td>
+      <td>0.52</td>
+      <td>0.29</td>
+      <td>0.80</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[164]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_train</span><span class="p">[</span><span class="n">x_train</span><span class="o">.</span><span class="n">index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[164]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>PTS</th>
+      <th>AST</th>
+      <th>FG%</th>
+      <th>3P%</th>
+      <th>STL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>62</td>
+      <td>15.00</td>
+      <td>2.90</td>
+      <td>0.42</td>
+      <td>0.39</td>
+      <td>0.90</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[165]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">index</span> <span class="o">==</span> <span class="mi">62</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[165]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>Player</th>
+      <th>Pos</th>
+      <th>Age</th>
+      <th>Tm</th>
+      <th>G</th>
+      <th>GS</th>
+      <th>MP</th>
+      <th>FG</th>
+      <th>FGA</th>
+      <th>...</th>
+      <th>FT%</th>
+      <th>ORB</th>
+      <th>DRB</th>
+      <th>TRB</th>
+      <th>AST</th>
+      <th>STL</th>
+      <th>BLK</th>
+      <th>TOV</th>
+      <th>PF</th>
+      <th>PTS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>62</th>
+      <td>95</td>
+      <td>Alec Burks</td>
+      <td>SG</td>
+      <td>28</td>
+      <td>TOT</td>
+      <td>66</td>
+      <td>19</td>
+      <td>26.60</td>
+      <td>4.90</td>
+      <td>11.60</td>
+      <td>...</td>
+      <td>0.89</td>
+      <td>0.70</td>
+      <td>3.50</td>
+      <td>4.30</td>
+      <td>2.90</td>
+      <td>0.90</td>
+      <td>0.30</td>
+      <td>1.40</td>
+      <td>1.90</td>
+      <td>15.00</td>
+    </tr>
+  </tbody>
+</table>
+<p>1 rows × 30 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Let's try Alex Burks, an above average shooting guard.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Alex Burks: 15.0 PTS, 2.9 AST, 41.8% FG%, 38.5 3P%, 0.9 STL</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[166]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s2">&quot;PTS&quot;</span><span class="p">,</span> <span class="s2">&quot;AST&quot;</span><span class="p">,</span> <span class="s2">&quot;FG%&quot;</span><span class="p">,</span> <span class="s2">&quot;3P%&quot;</span><span class="p">,</span> <span class="s2">&quot;STL&quot;</span><span class="p">]]</span>
-<span class="n">average_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">8.7</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="o">.</span><span class="mi">466</span><span class="p">,</span> <span class="o">.</span><span class="mi">404</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+<span class="n">average_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">15.0</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">,</span> <span class="o">.</span><span class="mi">418</span><span class="p">,</span> <span class="o">.</span><span class="mi">385</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span>
 <span class="n">stats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">average_vals</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">columns</span><span class="p">)),</span> 
                               <span class="n">columns</span><span class="o">=</span><span class="n">features</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="n">stats</span>
@@ -15934,7 +16363,7 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[166]:</div>
 
 
 
@@ -15967,11 +16396,11 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
   <tbody>
     <tr>
       <th>0</th>
-      <td>8.70</td>
-      <td>1.40</td>
-      <td>0.47</td>
-      <td>0.40</td>
-      <td>0.30</td>
+      <td>15.00</td>
+      <td>2.90</td>
+      <td>0.42</td>
+      <td>0.39</td>
+      <td>0.90</td>
     </tr>
   </tbody>
 </table>
@@ -15987,11 +16416,11 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[168]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">estimate</span> <span class="o">=</span> <span class="n">guard_data_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">stats</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The regression predicts </span><span class="si">{</span><span class="n">estimate</span><span class="si">:</span><span class="s1">.3</span><span class="si">}</span><span class="s1"> minutes per game for Grayson Allen, who played 18.9 minutes per game.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The regression predicts </span><span class="si">{</span><span class="n">estimate</span><span class="si">:</span><span class="s1">.3</span><span class="si">}</span><span class="s1"> minutes per game for Alex Burks, who played 26.6 minutes per game.&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16011,7 +16440,7 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>The regression predicts 18.3 minutes per game for Grayson Allen, who played 18.9 minutes per game.
+<pre>The regression predicts 27.7 minutes per game for Alex Burks, who played 26.6 minutes per game.
 </pre>
 </div>
 </div>
@@ -16029,7 +16458,7 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Matisse Thybulle: 4.7 PTS, 1.2 AST, 42.3 FG%, .357 3P%, 1.4 STL</p>
+<p>Matisse Thybulle: 4.7 PTS, 1.2 AST, 42.3 FG%, 35.7 3P%, 1.4 STL</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16153,7 +16582,7 @@ Values over 40 minutes stand out from the random pattern of the residuals, sugge
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Damian Lillard: 30.0 PTS, 8.0 AST, 46.3 FG%, .401 3P%, 1.1 STL</p>
+<p>Damian Lillard: 30.0 PTS, 8.0 AST, 46.3 FG%, 40.1 3P%, 1.1 STL</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -17119,9 +17548,9 @@ Similar to the residuals from the guard regression, players with over 40 minutes
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Overall, the linear model was fairly accurate for guards, and very accurate for forwards and centers. The statistics of a player showed to be a good predictor of their minutes played, which makes sense. The average error from the actual minutes played was only by a minute or two, which isn't that much considering the average player plays 22 minutes per game.</p>
-<p>There definitely could've been more statistics entered, such as turnovers, free throw percentage, and fouls, which are all other ways to measure a player's performance. Also, there could have been a regression model built for each position, but for simplicity I narrowed it dwon to guards and forwards/centers. This would increase accuracy even more because typically shooting guards are better at shooting, while point guards are better at gathering assists. Also, centers get more blocks, and small forwards are all-around players, and different variables would be used for each position. In addition, I could have changed all the statistics so that each data point is divided by minutes played, so you can see who is the most efficient in statistics gathered per minute, which may help determine the minutes a player should get when a player is getting significantly less or more minutes than they should. One can also use datasets with more advanced data for better modeling.</p>
-<p>These models can definitely be used by an NBA basketball coach in order to determine if a player is playing enough or getting too much playing time, as the regression model would tell them how many minutes played the typical player with those stats would have. It can also help them determine whether a player on another team is undervalued compared to their playing time, which may influence their decision to trade for them if the model tells them they should be getting more playing time. Conversely, if a player is getting too many minutes, a coach may want to trade them away.</p>
+<p>Overall, the linear model was fairly accurate for guards, and very accurate for forwards and centers. The statistics of a player showed to be a good predictor of their minutes played, which makes sense. The average error from the actual minutes played was only by a minute or two, which isn't that much considering the average player plays 22 minutes per game. It's interesting that the model doesn't have a positive correlation with field goal percentage, possibly because the best player take the most shots, which may make them tired. Also, they are the ones to take important shots, which are usually more difficult. Something else that stood out is the importance of steals, possibly because steals are hard to get, and they can change the momentum of the game and often lead to a score, therefore players with more steals may be rewarded with more playing time.</p>
+<p>There definitely could've been more statistics entered, such as turnovers, free throw percentage, and fouls, which are all other ways to measure a player's performance. Also, there could have been a regression model built for each position, but for simplicity I narrowed it down to guards and forwards/centers. This would increase accuracy even more because typically shooting guards are better at shooting, while point guards are better at gathering assists. Also, centers get more blocks, and small forwards are all-around players, and different variables would be used for each position. In addition, I could have changed all the statistics so that each data point is divided by minutes played, so you can see who is the most efficient in statistics gathered per minute, which may help determine the minutes a player should get when a player is getting significantly less or more minutes than they should. One can also use datasets with more advanced data for better modeling.</p>
+<p>These models can definitely be used by an NBA basketball coach in order to determine if a player is playing enough or getting too much playing time, as the regression model would tell them how many minutes played the typical player with those stats would have. It can also help them determine whether a player on another team is undervalued compared to their playing time, which may influence their decision to trade for them if the model tells them they should be getting more playing time. Conversely, if a player is getting too many minutes, a coach may want to trade them away. NBA statistics are overall consistent, so one could use this for the current season as well.</p>
 <p>Something to consider is, do the minutes affect the statistics more than the statistics affect the minutes played? A player who doesn't play enough may not have enough chances to prove themselves to play more minutes. There also could be other good players in the same position on the same team, meaning less minutes for that player.</p>
 
 </div>
